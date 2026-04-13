@@ -51,3 +51,8 @@ LibiglOptions.cmake
 dox/
 latex/
 scripts/
+
+# REZ
+_rez_build
+.vscode
+.idea
