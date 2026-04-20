@@ -15,6 +15,7 @@ with scope('config') as c:
 
 requires = [
     "eigen",
+    "boost",
 ]
 
 private_build_requires = [
