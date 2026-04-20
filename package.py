@@ -1,6 +1,6 @@
 name = 'libigl'
 
-version = '2.6.0.hh.1.0.1'
+version = '2.6.0.hh.1.0.2'
 
 authors = [
     'Libigl'

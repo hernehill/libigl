@@ -41,10 +41,10 @@ endif()
 ################################################################################
 ################################################################################
 ################################################################################
-# if(CMAKE_COMPILER_IS_GNUCC)
-#   set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC")
-#   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
-# endif()
+if(CMAKE_COMPILER_IS_GNUCC)
+  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
+endif()
 ################################################################################
 ################################################################################
 ################################################################################
@@ -102,8 +102,8 @@ if(LIBIGL_TOPLEVEL_PROJECT AND (NOT APPLE) AND UNIX)
 endif()
 
 # Build tests and tutorials
-option(LIBIGL_BUILD_TESTS      "Build libigl unit test"                ${LIBIGL_TOPLEVEL_PROJECT})
-option(LIBIGL_BUILD_TUTORIALS  "Build libigl tutorial"                 ${LIBIGL_TOPLEVEL_PROJECT})
+option(LIBIGL_BUILD_TESTS      "Build libigl unit test"                OFF)
+option(LIBIGL_BUILD_TUTORIALS  "Build libigl tutorial"                 OFF)
 option(LIBIGL_INSTALL          "Enable installation of libigl targets" ${LIBIGL_TOPLEVEL_PROJECT})
 
 # USE_STATIC_LIBRARY speeds up the generation of multiple binaries,
@@ -138,7 +138,7 @@ option(LIBIGL_RESTRICTED_TRIANGLE "Build target igl_restricted::triangle" ${LIBI
 # GLFW doesn't run on headless CI machines so don't run (or build them).
 # Unfortunately on headless mac machines glfw seems to hang rather than crash
 # making it hard to catch at runtime.
-option(LIBIGL_GLFW_TESTS       "Build igl::glfw tests"             ${LIBIGL_TOPLEVEL_PROJECT})
+option(LIBIGL_GLFW_TESTS       "Build igl::glfw tests"             OFF)
 
 option(LIBIGL_WARNINGS_AS_ERRORS "Turn on many warnings and treat as errors" OFF)
 
