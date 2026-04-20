@@ -1,9 +1,10 @@
 name = 'libigl'
 
-version = '2.6.0.hh.1.0.0'
+version = '2.6.0.hh.1.0.1'
 
 authors = [
     'Libigl',
+    "eigen",
 ]
 
 description = '''Geometry processing lib'''
@@ -28,6 +29,7 @@ def commands():
     env.LIBIGL_INCLUDES = '{root}/include'
     env.LIBRARY_PATH.append('{root}/lib64')
     env.LD_LIBRARY_PATH.append('{root}/lib64')
+    env.libigl_DIR.append('{root}/lib64/cmake/igl')
 
 
 uuid = 'repository.libigl'
