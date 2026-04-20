@@ -3,8 +3,7 @@ name = 'libigl'
 version = '2.6.0.hh.1.0.1'
 
 authors = [
-    'Libigl',
-    "eigen",
+    'Libigl'
 ]
 
 description = '''Geometry processing lib'''
@@ -15,6 +14,7 @@ with scope('config') as c:
     c.plugins.release_hook.hh_emailer.recipients = []
 
 requires = [
+    "eigen",
 ]
 
 private_build_requires = [
